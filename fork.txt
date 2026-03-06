@@ -1,1 +1,11 @@
-Coming soon...
+Its actually quite easy, you just have to follow these steps:
+  1) have access to a github account
+  2) know how to use github
+  3) fork https://github.com/AlexOfficial4493/About-Me
+  4) download all of the files
+  5) change config.txt to the link to about.txt on your github repo (make sure you give the raw link)
+  6) edit about.txt (you can use template.txt to help you)
+  7) publish the website to your favorite publisher (i recommend netlify)
+  8) if it doesnt work then ask for help on my discord server (https://discord.gg/JdKxQKXCxj)
+  9) if it the changes dont take effect immediately then dont come bite me, just wait. raw.githubusercontent.com is slow
+enjoy (:
