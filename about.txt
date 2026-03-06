@@ -1,0 +1,4 @@
+Name: [Your Name]
+Bio: Grade 8 student at Rand Park High School. Cybersecurity researcher and photography enthusiast.
+Interests: Android Custom ROMs (AiraOs), Automotive (Porsche & BMW), Photography (Canon R50)
+Projects: AiraOs Development, 2013 MacBook Pro Restoration, Tesla Model 3 Performance Setup
