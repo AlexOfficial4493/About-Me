@@ -1,6 +1,6 @@
 Name: Alex Naude
 subtitle: Student | Developer | Creator.
-Bio: Grade 8 student at Rand Park High School, Photography Enthusiast
+Bio: Grade 8 student, Photography Enthusiast
 Interests: Android Custom ROMs, Automotive, Photography
 Projects: Porting portal 2 to android, Porting TWRP to A04e, Creating a development suite for A04e
 social: Youtube|https://www.youtube.com/@Alex_Official4493, Github|https://github.com/AlexOfficial4493, Discord Server|https://discord.gg/JdKxQKXCxj
