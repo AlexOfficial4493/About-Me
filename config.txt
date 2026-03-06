@@ -1,1 +1,1 @@
-url: https://raw.githubusercontent.com/AlexOfficial4493/About-Me/main/about.txt
+url: {your raw link here}
