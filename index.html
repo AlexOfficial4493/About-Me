@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-sans relative overflow-x-hidden">
+    <!-- Loading overlay -->
+    <div id="loader" class="fixed inset-0 bg-gray-900 z-50 flex items-center justify-center">
+        <div class="w-16 h-16 border-4 border-blue-400 border-t-transparent rounded-full animate-spin"></div>
+    </div>
+    <!-- Navigation -->
+
+    <nav id="navbar" class="fixed top-0 w-full z-50 glassmorphism">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-white" id="nav-name">Alex</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-white hover:text-blue-400 transition-colors">About</a>
+                    <a href="#interests" class="text-white hover:text-blue-400 transition-colors">Interests</a>
+                    <a href="#projects" class="text-white hover:text-blue-400 transition-colors">Projects</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-white focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="#about" class="block text-white hover:text-blue-400 py-2">About</a>
+                <a href="#interests" class="block text-white hover:text-blue-400 py-2">Interests</a>
+                <a href="#projects" class="block text-white hover:text-blue-400 py-2">Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent" id="hero-name">
+                Hi, I'm Alex
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8" id="hero-subtitle">
+                
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#about" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full transition-colors">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 fade-in-up">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-8 text-center">About Me</h2>
+            <div id="about-content" class="text-gray-300 leading-relaxed text-center">
+                <!-- Content will be injected here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Interests -->
+    <section id="interests" class="py-16 px-4 sm:px-6 lg:px-8 fade-in-up">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center">Technical Interests</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="interests-grid">
+                <!-- Interests will be injected here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Projects -->
+    <section id="projects" class="py-16 px-4 sm:px-6 lg:px-8 fade-in-up">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-8 text-center">Current Projects</h2>
+            <ul class="space-y-4" id="projects-list">
+                <!-- Projects will be injected here -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- Social Media -->
+    <section id="social" class="py-16 px-4 sm:px-6 lg:px-8 fade-in-up">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-12">My Socials</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-md mx-auto justify-center" id="social-links">
+                <!-- Social links will be injected here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Other -->
+    <section id="other" class="py-16 px-4 sm:px-6 lg:px-8 fade-in-up">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-8 text-center">Other</h2>
+            <div id="other-content" class="text-gray-300 leading-relaxed text-center">
+                <!-- Other content will be injected here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Miscellaneous -->
+    <section id="misc" class="py-16 px-4 sm:px-6 lg:px-8 fade-in-up" style="display: none;">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-8 text-center">Miscellaneous</h2>
+            <div id="misc-content" class="text-gray-300 leading-relaxed">
+                <!-- Misc content will be injected here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+        <p id="footer-text">&copy; 2024 Alex. All rights reserved.</p>
+        <p class="mt-4">
+            <a href="fork.html" class="text-blue-400 hover:text-blue-300 transition-colors">Fork this portfolio for yourself</a>
+        </p>
+        <p id="cache-note" class="mt-2 text-sm text-gray-500" style="display:none;">
+            if your changes arent reflecting immediately, then just wait, its a thing with github. they take a couple of minutes for changes to reflect
+        </p>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Parser function
+        function parseData(text) {
+            const lines = text.split('\n').map(line => line.trim()).filter(line => line);
+            const data = {};
+            let currentKey = null;
+            lines.forEach(line => {
+                const colonIndex = line.indexOf(':');
+                if (colonIndex !== -1) {
+                    const key = line.substring(0, colonIndex).trim().toLowerCase();
+                    const value = line.substring(colonIndex + 1).trim();
+                    data[key] = value;
+                    currentKey = key;
+                } else if (currentKey && line) {
+                    data[currentKey] += ' ' + line;
+                }
+            });
+            return data;
+        }
+
+        // Fetch and populate content
+        async function fetchAndPopulateContent() {
+            try {
+                // First, fetch config to get the URL
+                const configResponse = await fetch('./config.txt');
+                if (!configResponse.ok) {
+                    throw new Error('Config fetch failed');
+                }
+                const configText = await configResponse.text();
+                const configData = parseData(configText);
+                const aboutUrl = configData.url;
+
+                // Now fetch about.txt from the URL
+                // show cache note if using custom URL
+                const defaultUrl = 'https://raw.githubusercontent.com/AlexOfficial4493/About-Me/main/about.txt';
+                if (aboutUrl !== defaultUrl) {
+                    document.getElementById('cache-note').style.display = 'block';
+                }
+                const response = await fetch(aboutUrl);
+                if (!response.ok) {
+                    throw new Error('About fetch failed');
+                }
+                const text = await response.text();
+                const data = parseData(text);
+                const name = data.name || 'Alex';
+                console.log('Parsed data:', data);
+                console.log('Name:', name);
+                document.title = `${name}'s Portfolio`;
+                document.getElementById('nav-name').textContent = name;
+                document.getElementById('hero-name').textContent = `Hi, I'm ${name}`;
+                document.getElementById('footer-text').innerHTML = `&copy; 2024 ${name}. All rights reserved.`;
+
+                // Populate subtitle
+                document.getElementById('hero-subtitle').textContent = data.subtitle || '';
+
+                // Populate bio
+                const bioElement = document.getElementById('about-content');
+                bioElement.innerHTML = (data.bio || '').replace(/\n/g, '<br>');
+                
+                // Adaptive font sizing based on bio length
+                const bioLength = bioElement.textContent.length;
+                if (bioLength < 200) {
+                    bioElement.style.fontSize = '1.25rem';
+                } else if (bioLength < 500) {
+                    bioElement.style.fontSize = '1rem';
+                } else {
+                    bioElement.style.fontSize = '0.875rem';
+                }
+
+                // Populate interests
+                const interests = (data.interests || '').split(',').map(i => i.trim()).filter(i => i);
+                const interestIcons = {
+                    'Android': 'smartphone',
+                    'Linux': 'terminal',
+                    'Photography': 'camera'
+                };
+                const interestsGrid = document.getElementById('interests-grid');
+                interestsGrid.innerHTML = interests.map(interest => `
+                    <div class="bg-gray-900 p-6 rounded-lg text-center hover:bg-gray-800 transition-colors">
+                        <i data-lucide="${interestIcons[interest] || 'star'}" class="w-16 h-16 mx-auto mb-4 text-blue-400"></i>
+                        <h3 class="text-xl font-semibold mb-2">${interest}</h3>
+                    </div>
+                `).join('');
+
+                // Populate projects
+                const projects = (data.projects || '').split(',').map(p => p.trim()).filter(p => p);
+                const projectsList = document.getElementById('projects-list');
+                projectsList.innerHTML = projects.map(project => {
+                    const [title, link] = project.split('|').map(s => s.trim());
+                    return link ? `
+                        <li class="bg-gray-900 p-6 rounded-lg">
+                            <a href="${link}" target="_blank" class="text-xl font-semibold mb-2 text-blue-400 hover:text-blue-300 transition-colors">${title}</a>
+                        </li>
+                    ` : `
+                        <li class="bg-gray-900 p-6 rounded-lg">
+                            <h3 class="text-xl font-semibold mb-2 text-blue-400">${title}</h3>
+                        </li>
+                    `;
+                }).join('');
+
+                // Populate social
+                let social = (data.social || '').split(',').map(s => s.trim()).filter(s => s);
+                // filter out bad links
+                social = social.filter(soc => {
+                    const [, link] = soc.split('|').map(s => s.trim());
+                    if (!link) return false;
+                    if (link.includes('bit.ly') || link.includes('spotify')) return false;
+                    // placeholder checks
+                    if (link.includes('yourusername') || link.includes('linkedin.com/in/yourprofile')) return false;
+                    return true;
+                });
+                const socialIcons = {
+                    'GitHub': 'github',
+                    'LinkedIn': 'linkedin',
+                    'Twitter': 'twitter',
+                    'Instagram': 'instagram'
+                };
+                const socialLinks = document.getElementById('social-links');
+                socialLinks.innerHTML = social.map(soc => {
+                    const [platform, link] = soc.split('|').map(s => s.trim());
+                    const icon = socialIcons[platform] || 'link';
+                    return `
+                        <a href="${link}" target="_blank" class="bg-gray-900 hover:bg-gray-800 transition-colors rounded-lg p-6 flex flex-col items-center justify-center text-center transform hover:scale-105 motion-safe:transition-transform motion-safe:duration-300">
+                            <i data-lucide="${icon}" class="w-8 h-8 text-blue-400 mb-2"></i>
+                            <span class="text-gray-300 mt-1">${platform}</span>
+                        </a>
+                    `;
+                }).join('');
+
+                // Populate other
+                document.getElementById('other-content').innerHTML = (data.other || '').replace(/\n/g, '<br>');
+
+                // Handle miscellaneous
+                const knownKeys = ['name', 'subtitle', 'bio', 'interests', 'projects', 'social', 'other'];
+                const miscContent = [];
+                for (const key in data) {
+                    if (!knownKeys.includes(key) && data[key]) {
+                        miscContent.push(`<h3 class="text-xl font-semibold mb-2 text-blue-400 capitalize">${key}</h3><p>${data[key].replace(/\n/g, '<br>')}</p>`);
+                    }
+                }
+                if (miscContent.length > 0) {
+                    document.getElementById('misc-content').innerHTML = miscContent.join('<br>');
+                    document.getElementById('misc').style.display = 'block';
+                }
+
+                // Hide empty sections
+                if (!data.bio) document.getElementById('about').style.display = 'none';
+                if (!interests.length) document.getElementById('interests').style.display = 'none';
+                if (!projects.length) document.getElementById('projects').style.display = 'none';
+                if (!social.length) document.getElementById('social').style.display = 'none';
+                if (!data.other) document.getElementById('other').style.display = 'none';
+
+                // Re-initialize icons after dynamic content
+                lucide.createIcons();
+
+            } catch (error) {
+                console.error('Fetch error:', error);
+                document.getElementById('about-content').innerHTML = '<p class="text-center text-gray-400">Currently updating from GitHub...</p>';
+            }
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe sections
+        document.querySelectorAll('.fade-in-up').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Load content on page load
+        fetchAndPopulateContent().then(() => {
+            // hide loader once everything is loaded
+            const loader = document.getElementById('loader');
+            if (loader) {
+                loader.classList.add('opacity-0');
+                setTimeout(() => loader.remove(), 600);
+            }
+        });
+
+        // optional nav show/hide on scroll
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            const current = window.pageYOffset;
+            if (current > lastScroll) {
+                nav.classList.add('-translate-y-full');
+            } else {
+                nav.classList.remove('-translate-y-full');
+            }
+            lastScroll = current;
+        });
+    </script>
+</body>
+</html>

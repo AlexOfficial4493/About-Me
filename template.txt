@@ -1,0 +1,8 @@
+name: Your Name
+subtitle: Your Subtitle
+bio: Your bio text here. This can be multiple lines.
+interests: Interest1, Interest2, Interest3
+projects: Project1|https://link1.com, Project2|https://link2.com
+social: GitHub|https://github.com/yourusername, LinkedIn|https://linkedin.com/in/yourprofile
+other: Any other information you want to include.
+skills: Skill1, Skill2, Skill3

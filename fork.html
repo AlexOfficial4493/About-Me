@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Fork This Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <div class="max-w-4xl mx-auto px-4 py-16">
+        <h1 class="text-4xl font-bold mb-8 text-center">How to Fork This Portfolio</h1>
+        <div id="fork-content" class="text-gray-300 leading-relaxed">
+            <!-- Content will be loaded here -->
+        </div>
+        <div class="text-center mt-8">
+            <a href="index.html" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full transition-colors">Back to Portfolio</a>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Fetch fork instructions
+        async function fetchForkContent() {
+            try {
+                const response = await fetch('https://raw.githubusercontent.com/AlexOfficial4493/About-Me/refs/heads/main/fork.txt');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const text = await response.text();
+                document.getElementById('fork-content').innerHTML = text.replace(/\n/g, '<br>');
+            } catch (error) {
+                console.error('Fetch error:', error);
+                document.getElementById('fork-content').innerHTML = '<p class="text-center text-gray-400">Unable to load instructions. Please check your connection.</p>';
+            }
+        }
+
+        // Load content on page load
+        fetchForkContent();
+    </script>
+</body>
+</html>
