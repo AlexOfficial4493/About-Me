@@ -1,4 +1,4 @@
-Name: Alex
+Name: JengaMeow
 subtitle: Student | Developer | Creator.
 Bio: Grade 8 student at Rand Park High School, Photography Enthusiast
 Interests: Android Custom ROMs, Automotive, Photography
