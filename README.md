@@ -1,2 +1,1 @@
-# About-Me
-Just to store a file for my upcoming website
+the code speaks for itself (mainly because i forgot what it does)
