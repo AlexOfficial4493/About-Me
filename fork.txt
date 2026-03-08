@@ -1,11 +1,12 @@
-Its actually quite easy, you just have to follow these steps:
-  1) have access to a github account
-  2) know how to use github
-  3) fork https://github.com/AlexOfficial4493/About-Me
-  4) download all of the files
-  5) change config.txt to the link to about.txt on your github repo (make sure you give the raw link)
-  6) edit about.txt (you can use template.txt to help you)
-  7) publish the website to your favorite publisher (i recommend netlify) (you only have to upload config.txt, fork.html and index.html)
-  8) if it doesnt work then ask for help on my discord server (https://discord.gg/JdKxQKXCxj)
-  9) if it the changes dont take effect immediately then dont come bite me, just wait. raw.githubusercontent.com is slow
-enjoy (:
+It's actually quite easy! Just follow these steps to get your portfolio live:
+
+1. GitHub Access: Ensure you have a GitHub account and a basic understanding of how to manage repositories.
+2. Fork the Repo: Fork the project at https://github.com/AlexOfficial4493/About-Me to your own account.
+3. Get the Files: Download the repository files or clone them to your local machine.
+4. Configure Your Link: Open config.txt and replace the URL with the link to your own about.txt. (Crucial: Use the "Raw" link from GitHub).
+5. Personalize: Edit about.txt with your own info. You can use template.txt as a guide for the formatting.
+6. Deploy: Upload config.txt, fork.html, and index.html to your favorite host (Netlify is highly recommended).
+7. Support: If something breaks, don't panic. Join the community on Discord for help: https://discord.gg/JdKxQKXCxj
+8. Patience: If changes don't show up instantly, just wait a few minutes. raw.githubusercontent.com caching can be slow!
+
+Enjoy your new portfolio! (:
